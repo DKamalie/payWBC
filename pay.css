@@ -1,0 +1,257 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Merriweather', serif;
+}
+.navigation {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 150px;
+  grid-template-areas:
+  "coffee sugar milk";
+  align-items: center;
+  justify-items: center;
+
+  background: black;
+  color: white;
+
+}
+.coffee {
+  grid-area: coffee;
+  padding: 5% 33%;
+  box-shadow: 0 0 0 0;
+  transition: 1s;
+  transform: rotateZ(0deg);
+  position: relative;
+  top: 0;
+  z-index: 2;
+}
+
+.coffee:hover {
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+
+  transition: 1s;
+  background: #e05f14;
+  color: white;
+  z-index: 2;
+  border-left: 5px solid #794228;
+  border-right: 5px solid #794228;
+  border-bottom: 5px solid #372214;
+  border-top: 5px solid #372214;
+
+}
+.sugar {
+  grid-area: sugar;
+  padding: 7% 33%;
+  box-shadow: 0 0 0 0;
+  transition: 1s;
+}
+.sugar:hover {
+  box-shadow: 1px 49px 5px -37px rgba(0,0,0,0.75);
+  transition: 1s;
+  background: #d38a56;
+  color: white;
+  z-index: 2;
+  border-left: 5px solid #794228;
+  border-right: 5px solid #794228;
+  border-bottom: 5px solid #372214;
+  border-top: 5px solid #372214;
+}
+.milk {
+  grid-area: milk;
+  padding: 5% 33%;
+  box-shadow: 0 0 0 0;
+  transition: 1s;
+  transform: rotateZ(0deg);
+}
+.milk:hover {
+  box-shadow: -10px 12px 5px 0px rgba(0,0,0,0.75);
+
+  transition: 1s;
+  background: #efbd7c;
+  color: white;
+  z-index: 2;
+  border-left: 5px solid #794228;
+  border-right: 5px solid #794228;
+  border-bottom: 5px solid #372214;
+  border-top: 5px solid #372214;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+.paySystem {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 250px 100px 150px;
+  grid-template-areas:
+  'me'
+  'payNow'
+  'payForm';
+  align-items: center;
+  justify-items: center;
+  /* background-image: url('images/cof.jpg');
+  background-repeat: no-repeat;
+  background-size: contain; */
+  background: black;
+  color: white;
+  font-size: .8rem;
+  margin: 4% 25%;
+  box-shadow: 0px 0px 0px 8px #000000, 0px 0px 0px 16px #cc7c43, 0px 0px 0px 24px #000000 , 0px 0px 0px 31px #cc7c43, 0px 0px 0px 39px #000, -8px 3px 20px 6px #cc7c43;
+}
+
+}
+
+.payNow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 50px;
+  grid-template-areas:
+  'online shop';
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  margin: 2rem;
+  grid-area: payNow;
+  font-size: .8rem;
+
+
+
+}
+.online {
+  grid-area: online;
+  background: green;
+  padding: 2rem 2rem;
+
+}
+.shop {
+  grid-area: shop;
+  background: green;
+  padding: 2rem 2rem;
+
+}
+
+
+.payForm {
+  text-align: right;
+  box-shadow: 0px 0px 0px 8px #000000, 0px 0px 0px 16px #cc7c43, 0px 0px 0px 24px #000000 , 0px 0px 0px 31px #cc7c43, 0px 0px 0px 39px #000, -8px 3px 20px 6px #cc7c43;
+
+  grid-area: payForm;
+}
+
+#me {
+  text-align: left;
+  font-size: 1.2rem;
+  grid-area: me;
+
+}
+
+/* PARALLAX */
+/*
+.caption {
+  position: absolute;
+  padding: 9.7rem 39rem;
+  background: rgba(0,0,0,0.8);
+  color: white;
+  font-size: 1rem;
+  letter-spacing: 4px;
+  border-top: 5px solid black;
+  border-bottom: 5px solid black;
+  transition: 1s;
+}
+.caption:hover {
+  background: rgba(0,0,0,0.5);
+  transition: 1s;
+}
+
+.bgImg {
+  background-image: url('images/cc.jpg');
+  filter: saturate(90%);
+  height: 550px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  top: 0;
+}
+ */
+
+/* FOOTER */
+footer {
+  display: grid;
+  grid-template-columns: 25% 25% 50%;
+  grid-template-rows: 280px 120px;
+  grid-template-areas:
+  "address contact value"
+  "copyright copyright copyright";
+  background: black;
+  color: white;
+  justify-items: center;
+  align-items: center;
+  box-shadow: 0 0 50px rgba(238,221,130, 1);
+
+}
+
+.address {
+  grid-area: address;
+}
+.address li {
+  list-style:  square;
+  padding: 10px;
+}
+.contact {
+  grid-area: contact;
+}
+.contact li {
+  list-style:  square;
+  padding: 10px;
+}
+.value {
+  grid-area: value;
+  text-align: center;
+
+}
+.value p {
+  padding: 10px;
+  font-size: 23px;
+}
+.copyright {
+  grid-area: copyright;
+}
+/* FOOTER QUERIES  */
+@media(max-width: 800px) {
+  footer {
+    grid-template-columns: 1fr;
+    grid-template-rows: 180px 180px 150px 20px;
+    grid-template-areas:
+    "address"
+    "contact"
+    "value"
+    "copyright";
+
+    justify-content: center;
+    text-align: center;
+  }
+  .address {
+    font-size: 0.7rem;
+  }
+  .contact {
+    font-size: 0.7rem;
+  }
+  .value {
+    font-size: 0.8rem;
+  }
+.value h1 {
+  font-size: 0.8rem;
+}
+.value p {
+  font-size: 0.7rem;
+}
+  .copyright {
+    font-size: 0.5rem;
+    padding: 10px;
+  }
+}
